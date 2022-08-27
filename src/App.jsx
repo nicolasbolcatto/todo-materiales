@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <NavBar  />
-      <ItemListContainer/>
+      <ItemListContainer greeting="Prop de prueba"/>
     </div>
   );
 }
