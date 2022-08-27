@@ -1,12 +1,20 @@
 import React from "react";
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
     return(
         <nav className="nav">
-            <div className="title">
-                <h1>Todo Materiales</h1>
-                <h2>Tu tienda online para la construcción</h2>
+            <div className="topNav">
+                <div className="title">
+                    <h1>Todo Materiales</h1>
+                    <h2>Tu tienda online para la construcción</h2>
+                </div>
+                <div className="cartWidget">
+                    <CartWidget />
+                </div>
             </div>
+            
+                
             <div className="buttons">
                 <div className="navButton">
                     <p>Inicio</p>
@@ -24,7 +32,6 @@ const NavBar = () => {
                     <p>Contacto</p>
                 </div>
             </div>
-            
             
         </nav>
     )

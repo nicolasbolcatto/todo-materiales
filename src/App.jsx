@@ -1,12 +1,16 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import Content from './components/Content';
-import './styles/NavBar.css';
+import './components/NavBar.css';
+import './components/CartWidget.css';
+import './components/ItemListContainer.css';
+import ItemListContainer from './components/ItemListContainer';
+
+
 function App() {
   return (
     <div className="App">
       <NavBar  />
-      <Content variableDePrueba="Segundo Desafío entregado!!" />
+      <ItemListContainer/>
     </div>
   );
 }
