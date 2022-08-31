@@ -1,0 +1,23 @@
+.itemCountButton{
+    border: 0.15rem solid darkred;
+    border-radius: 0.25rem;
+    margin: 0.5rem;
+    padding: 0;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    color: darkred;
+    width: 2rem;
+}
+
+.itemCountInput{
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.itemCountButton:hover{
+    cursor: pointer;
+}

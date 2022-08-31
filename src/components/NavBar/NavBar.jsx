@@ -1,7 +1,10 @@
+//imports CartWidget component and css file for NavBar
 import React from "react";
-import CartWidget from "./CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
+import './NavBar.css';
 
 const NavBar = () => {
+    //Renders the navbar and the CartWidget component
     return(
         <nav className="nav">
             <div className="topNav">
@@ -13,7 +16,6 @@ const NavBar = () => {
                     <CartWidget />
                 </div>
             </div>
-            
                 
             <div className="buttons">
                 <div className="navButton">
