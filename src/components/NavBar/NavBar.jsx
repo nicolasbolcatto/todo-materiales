@@ -4,7 +4,9 @@ import CartWidget from "../CartWidget/CartWidget";
 import './NavBar.css';
 
 const NavBar = () => {
+    
     //Renders the navbar and the CartWidget component
+
     return(
         <nav className="nav">
             <div className="topNav">

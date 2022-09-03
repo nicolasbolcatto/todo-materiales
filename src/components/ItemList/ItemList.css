@@ -1,0 +1,7 @@
+.itemList{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+    gap: .2rem;
+    background: linear-gradient(rgb(255, 197, 197),whitesmoke);
+}
+
