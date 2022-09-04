@@ -21,3 +21,14 @@
 .itemCountButton:hover{
     cursor: pointer;
 }
+
+.itemAddButton{
+    width: 25%;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: lightgray;
+    border-radius: 0.5rem;
+    border: 0.25rem solid lightgray;
+}
