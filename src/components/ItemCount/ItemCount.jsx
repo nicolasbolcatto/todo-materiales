@@ -2,7 +2,7 @@
 import React from "react";
 import './ItemCount.css';
 
-function ItemCount ({itemName,stock,initial, onAdd}) {
+function ItemCount ({itemName,stock,initial}) {
     //Defines Hook for state "count"
     const [count,setCount]= React.useState(1);
 
@@ -23,7 +23,7 @@ function ItemCount ({itemName,stock,initial, onAdd}) {
     }
 
     function onAdd(){
-        console.log(`Se agregan items al carrito`)
+        console.log(`Se agregaran ${count} items al carrito`)
         }
     
 
