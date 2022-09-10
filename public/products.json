@@ -1,0 +1,7 @@
+[{ "id": 0, "image": "./img/piso-vinilico.png", "name": "Piso vinílico 2mm Simil Madera", "category": "Pisos", "price": "350", "stock": "10", "description": "Piso vinilico de alta resistencia" },
+    { "id": 1, "image": "./img/ladrillo-vidrio.png", "name": "Ladrillo de vidrio 19 x 19 x 8", "category": "Vidrios", "price": "980", "stock": "20", "description": "Ladrillo de vidrio de alta calidad" },
+    { "id": 2, "image": "./img/pegamento-ceramicas-weber.png", "name": "Pegamento Cerámicos Weber Pro 30 kg", "category": "Albañilería", "price": "2300", "stock": "15", "description": "..." },
+    { "id": 3, "image": "./img/disyuntor.png", "name": "Disyuntor diferencial Schneider 2x40a", "category": "Electricidad", "price": "10300", "stock": "5", "description": "..." },
+    { "id": 4, "image": "./img/cable-unipolar-4mm.png", "name": "Cable Unipolar 4 mm Broke Rollo X100 Mts", "category": "Electricidad", "price": "6400", "stock": "3", "description": "..." },
+    { "id": 5, "image": "./img/ducha-monocomando.png", "name": "Griferia Ducha Monocomando Exterior con Transferencia", "category": "Griferías y sanitarios", "price": "8500", "stock": "6", "description": "..." }
+]
