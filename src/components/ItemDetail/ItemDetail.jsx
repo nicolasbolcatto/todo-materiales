@@ -2,7 +2,7 @@ import React from "react";
 import ItemCount from "../ItemCount/ItemCount"
 import './ItemDetail.css';
 
-const ItemDetail = ({item}) => {
+const ItemDetail = ({item, onAdd}) => {
     return(
         //Returns the item detail
         <div>
@@ -18,8 +18,7 @@ const ItemDetail = ({item}) => {
                     <p className="itemDescription">{item.description}</p>
                 </div>
                 <div>
-                {/* Quise pasar el item.stock de forma dinámica pero no logro hacer que funcione, el state aparece como undefined */}
-                <ItemCount stock={20} initial={1} onAdd={0}/>
+                <ItemCount item={item} initial={1} onAdd={onAdd}/>
                 </div>
             </div>
             
