@@ -2,6 +2,7 @@
 import React from "react";
 import Item from '../Item/Item'
 import './ItemList.css';
+import {Link} from "react-router-dom"
 
 //The items array obtain with the promise in ItemListContainer is passed as a prop to ItemList
 const ItemList = ({items}) => {
@@ -10,13 +11,11 @@ const ItemList = ({items}) => {
         <div className="itemList">
             {items.map(item => 
                 
-                <Item key={item.id}
-                id={item.id}
-                name={item.name}
-                image={item.image}
-                price={item.price}
-                stock={item.stock}
-                category={item.category}/>
+                <Link key={item.id} style={{textDecoration: 'none'}} to={`/item/${item.id}`}>
+                    <Item 
+                    item={item}/>
+                </Link>
+                
             )}
         </div>
     )

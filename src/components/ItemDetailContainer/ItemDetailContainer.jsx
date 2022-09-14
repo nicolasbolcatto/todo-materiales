@@ -8,7 +8,7 @@ const ItemDetailContainer = () => {
     const {id} = useParams();
     useEffect(()=>{
         
-        fetch("products.json").then(response => {
+        fetch("../../products.json").then(response => {
             return response.json();
 
         }).then(database => {
@@ -16,9 +16,10 @@ const ItemDetailContainer = () => {
             setTimeout(()=>{
                 const product = database.find((prod) => prod.id === Number(id));
                 //console.log(product)
+                product.image = "../." + product.image;
                 product.stock = Number(product.stock)
                 setItem(product);
-            },3000);
+            },2000);
 
         }).catch(error => console.log("Hubo un error en la carga de datos: " + error))
     

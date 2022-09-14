@@ -1,4 +1,4 @@
-.item{
+.item {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -8,12 +8,12 @@
     border-radius: 1rem;
 }
 
-.itemImg{
+.itemImgList {
     margin: 1rem;
     border: .25rem solid lightslategray;
 }
 
-.itemCategory{
+.itemCategoryList {
     text-align: left;
     color: white;
     background-color: darkblue;
@@ -23,23 +23,23 @@
     border-radius: 0.25rem;
 }
 
-.itemName{
+.itemNameList {
     font-weight: bold;
     text-align: center;
     margin: 0 0.5rem;
 }
 
-.itemPriceList{
+.itemPriceList {
     font-size: 1rem;
 }
 
-.itemStockList{
+.itemStockList {
     text-align: center;
     margin: 0.5rem 0 0.5rem 0;
     font-size: 1rem;
 }
 
-.itemButton{
+.itemButtonList {
     margin: 1rem;
     font-weight: bold;
     font-size: 1rem;
@@ -50,7 +50,7 @@
     border-radius: 0.5rem;
 }
 
-.itemButton:hover{
+.itemButtonList:hover {
     cursor: pointer;
     background-color: goldenrod;
     transition: ease-in-out 0.3s;
