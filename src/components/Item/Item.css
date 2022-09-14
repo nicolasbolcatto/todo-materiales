@@ -1,18 +1,42 @@
 .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     margin: 1rem;
-    background-color: lightsalmon;
+    background-color: lightgray;
     border-radius: 1rem;
-    width: auto;
 }
 
 .itemImg{
-    margin: 2rem;
-    width: auto;
-    border: .25rem solid black;
+    margin: 1rem;
+    border: .25rem solid lightslategray;
+}
+
+.itemCategory{
+    text-align: left;
+    color: white;
+    background-color: darkblue;
+    max-width: fit-content;
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
 }
 
 .itemName{
     font-weight: bold;
+    text-align: center;
+    margin: 0 0.5rem;
+}
+
+.itemPriceList{
+    font-size: 1rem;
+}
+
+.itemStockList{
+    text-align: center;
+    margin: 0.5rem 0 0.5rem 0;
+    font-size: 1rem;
 }
 
 .itemButton{
@@ -20,7 +44,7 @@
     font-weight: bold;
     font-size: 1rem;
     background-color: lightgray;
-    width: 50%;
+    width: auto;
     height: 2rem;
     border: 0.25rem solid lightgray;
     border-radius: 0.5rem;
