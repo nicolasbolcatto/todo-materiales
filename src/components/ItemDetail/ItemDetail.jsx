@@ -2,7 +2,8 @@ import React from "react";
 import ItemCount from "../ItemCount/ItemCount"
 import './ItemDetail.css';
 
-const ItemDetail = ({item, onAdd}) => {
+const ItemDetail = ({item}) => {
+    
     return(
         //Returns the item detail
         <div className="itemDetailContainer">
@@ -17,7 +18,7 @@ const ItemDetail = ({item, onAdd}) => {
                     <p className="itemDescription">{item.description}</p>
                 </div>
                 <div>
-                <ItemCount item={item} initial={1} onAdd={onAdd}/>
+                <ItemCount item={item} initial={1}/>
                 </div>
             </div>
             

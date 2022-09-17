@@ -1,8 +1,9 @@
 //Imports css file for ItemCount
 import React from "react";
 import './ItemCount.css';
+import { Link } from "react-router-dom";
 
-function ItemCount ({item,initial,onAdd}) {
+function ItemCount ({item,initial}) {
     //Defines Hook for state "count"
     const [count,setCount]= React.useState(initial);
     const [itemAdd,setItemAdd] = React.useState(0);
@@ -24,11 +25,10 @@ function ItemCount ({item,initial,onAdd}) {
     }
 
     //Defines a function to add the amount of products selected to the cart, if there's enough quantity in the stock. It also updates the stock.
-    function addProducts(){
+    function onAdd(){
         if (count <= item.stock){
-            onAdd(count);
             setItemAdd(itemAdd + count);
-            console.log(item.stock)
+            item.stock -= count;
         }
     }
 
@@ -39,10 +39,14 @@ function ItemCount ({item,initial,onAdd}) {
                 <button className="itemCountButton" onClick = {onReduce}>-</button>
                 <p className="itemCountInput">{count}</p>
                 <button className="itemCountButton" onClick={onIncrease}>+</button>
-                <button className="itemAddButton" onClick = {addProducts}>Agregar</button>
+                <button className="itemAddButton" onClick = {onAdd}>Agregar</button>
             </div>
             <div className="itemStock">
             <p>Productos agregados: {itemAdd}</p>
+            <Link to={"/cart"}>
+            <button className="itemEndButton">Ver carrito</button>
+            </Link>
+            
             <p>Stock: {item.stock}</p> 
             
             </div>

@@ -25,13 +25,10 @@ const ItemDetailContainer = () => {
     
     },[id]);
 
-function onAdd(count){
-    item.stock -= count;
-}
 
     return(
         <div>
-            <ItemDetail item={item} initial={1} onAdd={onAdd}/>
+            <ItemDetail item={item} initial={1}/>
         </div>
         //Returns the item detail component
     )

@@ -52,11 +52,21 @@ button {
     padding: 0.75rem;
     background-color: darkblue;
     border-radius: 0.5rem;
-    border-color: darkblue;
 }
 
 .itemAddButton:hover{
     cursor: pointer;
+}
+
+.itemEndButton{
+    width: 100%;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    margin: 0.5rem;
+    padding: 0.75rem;
+    background-color: darkgreen;
+    border-radius: 0.5rem;
 }
 
 .itemStock{

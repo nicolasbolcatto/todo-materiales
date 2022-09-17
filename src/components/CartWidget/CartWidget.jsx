@@ -2,12 +2,15 @@
 import React from "react";
 import cartIcon from "./cartIcon.png";
 import './CartWidget.css';
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
     return(
         //Returns the cart icon
         <div>
-            <img className="cartIcon" src={cartIcon} alt="cart icon" />
+            <Link to={"/cart"}>
+                <img className="cartIcon" src={cartIcon} alt="cart icon" />
+            </Link>
         </div>
     )
     }
