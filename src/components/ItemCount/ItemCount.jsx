@@ -1,12 +1,15 @@
 //Imports css file for ItemCount
-import React from "react";
+import React,{useContext, useState} from "react";
 import './ItemCount.css';
 import { Link } from "react-router-dom";
+import {CartContext} from "../../context/CartContext";
 
 function ItemCount ({item,initial}) {
+
+    const context = useContext(CartContext)
     //Defines Hook for state "count"
-    const [count,setCount]= React.useState(initial);
-    const [itemAdd,setItemAdd] = React.useState(0);
+    const [count,setCount]= useState(initial);
+    const [itemAdd,setItemAdd] = useState(0);
 
     //Defines a function to reduce the quantity in the counter, and checks whether count is less or not than initial. If it is, it sets count to initial
     function onReduce(){
@@ -26,12 +29,20 @@ function ItemCount ({item,initial}) {
 
     //Defines a function to add the amount of products selected to the cart, if there's enough quantity in the stock. It also updates the stock.
     function onAdd(){
-        if (count <= item.stock){
-            setItemAdd(itemAdd + count);
+        if (count <= item.stock){    
             item.stock -= count;
+            setItemAdd(itemAdd + count);
+            context.addItem(item,count);
         }
     }
 
+    //Defines a function to completely remove an item from the cart. It also updates the selected amount and the stock.
+    function onRemove(){
+        context.removeItem(item.id)
+        setItemAdd(0);
+        item.stock += itemAdd;
+    }
+    
     return(
         //Renders the counter and "add"/"reduce" buttons, along with the stock of the item
         <div>
@@ -40,14 +51,16 @@ function ItemCount ({item,initial}) {
                 <p className="itemCountInput">{count}</p>
                 <button className="itemCountButton" onClick={onIncrease}>+</button>
                 <button className="itemAddButton" onClick = {onAdd}>Agregar</button>
+                <button className="itemRemoveButton" onClick = {onRemove}>Eliminar item del carrito</button>
             </div>
             <div className="itemStock">
             <p>Productos agregados: {itemAdd}</p>
             <Link to={"/cart"}>
             <button className="itemEndButton">Ver carrito</button>
             </Link>
+            <button onClick={context.clear} className="itemRemoveButton">Eliminar el carrito</button>
             
-            <p>Stock: {item.stock}</p> 
+            <p>Stock: {item.stock}</p>
             
             </div>
         </div>

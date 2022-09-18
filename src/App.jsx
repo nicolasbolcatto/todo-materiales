@@ -5,19 +5,22 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import CartProvider from './context/CartContext';
 
 function App() {
   //Renders NavBar and App components
   return (
-    <BrowserRouter>
-      <NavBar  />
-      <Routes>
-        <Route exact path="/" element={<ItemListContainer/>}/>
-        <Route path="/category/:id" element={<ItemListContainer/>}/>
-        <Route path="/item/:id" element={<ItemDetailContainer/>}/>
-        <Route path="/cart" element={<Cart/>}/>
-      </Routes>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <NavBar  />
+        <Routes>
+          <Route exact path="/" element={<ItemListContainer/>}/>
+          <Route path="/category/:id" element={<ItemListContainer/>}/>
+          <Route path="/item/:id" element={<ItemDetailContainer/>}/>
+          <Route path="/cart" element={<Cart/>}/>
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 
