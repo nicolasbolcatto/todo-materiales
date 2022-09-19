@@ -46,23 +46,28 @@ function ItemCount ({item,initial}) {
     return(
         //Renders the counter and "add"/"reduce" buttons, along with the stock of the item
         <div>
-            <div className="itemCount">
-                <button className="itemCountButton" onClick = {onReduce}>-</button>
-                <p className="itemCountInput">{count}</p>
-                <button className="itemCountButton" onClick={onIncrease}>+</button>
-                <button className="itemAddButton" onClick = {onAdd}>Agregar</button>
-                <button className="itemRemoveButton" onClick = {onRemove}>Eliminar item del carrito</button>
-            </div>
-            <div className="itemStock">
-            <p>Productos agregados: {itemAdd}</p>
-            <Link to={"/cart"}>
-            <button className="itemEndButton">Ver carrito</button>
-            </Link>
-            <button onClick={context.clear} className="itemRemoveButton">Eliminar el carrito</button>
-            
-            <p>Stock: {item.stock}</p>
-            
-            </div>
+            {itemAdd === 0 ? 
+                <div className="itemCount">
+                    <button className="itemCountButton" onClick = {onReduce}>-</button>
+                    <p className="itemCountInput">{count}</p>
+                    <button className="itemCountButton" onClick={onIncrease}>+</button>
+                    <button className="itemAddButton" onClick = {onAdd}>Agregar</button>
+                    <div className="itemStock">
+                        <p>Stock: {item.stock}</p>
+                    </div>
+                    
+                </div>
+                :
+                <div>
+                    <Link to={"/cart"}>
+                    <div className="itemCount">
+                        <button className="itemEndButton">Ver carrito</button>
+                    </div>
+                    </Link>
+                    <button className="itemRemoveButton" onClick = {onRemove}>Eliminar item del carrito</button>
+                </div>
+            }
+
         </div>
     )
 }
