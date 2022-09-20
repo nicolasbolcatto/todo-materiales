@@ -59,12 +59,11 @@ function ItemCount ({item,initial}) {
                 </div>
                 :
                 <div>
-                    <Link to={"/cart"}>
+                    <Link style={{textDecoration: 'none'}} to={"/cart"}>
                     <div className="itemCount">
                         <button className="itemEndButton">Ver carrito</button>
                     </div>
                     </Link>
-                    <button className="itemRemoveButton" onClick = {onRemove}>Eliminar item del carrito</button>
                 </div>
             }
 

@@ -1,5 +1,4 @@
 import React from "react";
-import CartProvider from "../../context/CartContext";
 import ItemCount from "../ItemCount/ItemCount"
 import './ItemDetail.css';
 

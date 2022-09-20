@@ -35,7 +35,7 @@ const CartProvider = ({children}) =>{
             let existingItem = cart.find(element => element.id === id)
             let cartWithRemovedItem = []
             cart.forEach(item => {
-               if(item.id != existingItem.id){
+               if(item.id !== existingItem.id){
                 cartWithRemovedItem.push(item)
                }
             })
