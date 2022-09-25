@@ -58,6 +58,21 @@ button {
     cursor: pointer;
 }
 
+.itemRemoveButton{
+    width: 100%;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    margin: 0.5rem;
+    padding: 0.75rem;
+    background-color: red;
+    border-radius: 0.5rem;
+}
+
+.itemRemoveButton:hover{
+    cursor: pointer;
+}
+
 .itemEndButton{
     width: 100%;
     font-weight: bold;
@@ -67,6 +82,10 @@ button {
     padding: 0.75rem;
     background-color: darkgreen;
     border-radius: 0.5rem;
+}
+
+.itemEndButton:hover{
+    cursor: pointer;
 }
 
 .itemStock{

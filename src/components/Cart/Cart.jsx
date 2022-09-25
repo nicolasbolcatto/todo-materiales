@@ -1,10 +1,16 @@
-import React from "react";
-import './Cart.css';
+import React, {useContext} from "react";
+//import './Cart.css';
+import {CartContext} from "../../context/CartContext"
+
 
 const Cart = () => {
+
+    const context = useContext(CartContext)
+    const cart = context.cart
+    
     return(
         <div className="cartContainer">
-            <p>Soy el carrito</p>
+            {cart===[] ? "Carrito vacio" : "Elementos del carrito"}
         </div>
     )
 }
