@@ -32,17 +32,7 @@ function ItemCount ({item, initial, onAdd, count, setCount, itemAdd, setItemAdd}
                 <div className="itemStock">
                     <p>Stock: {item.stock}</p>
                 </div>
-<<<<<<< HEAD
-                :
-                <Link to={"/cart"}>
-                <div className="itemCount">
-                <button className="itemEndButton">Ver carrito</button>
-                </div>
-                </Link>
-            }
-=======
             </div>
->>>>>>> desafio-cart-view
         </div>
     )
 }
