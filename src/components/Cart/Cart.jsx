@@ -7,52 +7,43 @@ const Cart = () => {
 
     const context = useContext(CartContext)
 
-    //console.log(context.cart)
     return(
         <div className="cartContainer">
-            {context.cart === [] ?
-            <div>
-                {console.log("Aqui")}
-                <p>No has seleccionado ningun producto</p>
-                <Link style={{textDecoration: 'none'}} to={"/"}>
-                    <button>Explorar materiales</button>
-                </Link>
-            </div>
-            :
-            <div>
-                <p className="cartTitle">Detalle de tu compra:</p>
-                {context.cart.map((item) => (
-                    
-                    <div className="cartItem" key={item.id}>
-                        <img className="cartItemImage" src={"../.." + item.image} alt={item.name}></img>
-                        <p className="cartItemName">{item.name}</p>
-                        <div className="cartControls">
-                            <button onClick={() => context.removeItem(item.id)} className="cartDeleteButton">x</button>
-                            <p className="cartItemQuantity">{item.quantity} x $ {item.price} = $ {item.price*item.quantity}</p>
-                        </div>
-                    </div>
-                ))
-                }
-            </div> 
-            }
-            {context.cart === [] ?
+            {/* Conditional rendering of shopping list detail, or an empty cart message with a link to homepage */}
+            {context.totalItemsInCart() ?
                 <div>
-                    <p>No has seleccionado ningun producto</p>
-                    <Link to={"/"}>
-                        <button>Explorar materiales</button>
-                    </Link>
-                </div>
-                    :
-                <div>
-                    <button onClick={context.clear} className="cartDeleteFullButton">Eliminar el carrito</button>
-                </div>
-                    
-                }
+                    <p className="cartTitle">Detalle de tu compra:</p>
+                    {context.cart.map((item) => (
                         
-        
-            
+                        <div className="cartItem" key={item.id}>
+                            <img className="cartItemImage" src={"../.." + item.image} alt={item.name}></img>
+                            <Link style={{textDecoration: 'none'}} to={`/item/${item.id}`}><p className="cartItemName">{item.name}</p></Link>
+                            <div className="cartControls">
+                                <button onClick={() => context.removeItem(item.id)} className="cartDeleteButton">x</button>
+                                <p className="cartItemQuantity">{item.quantity} x $ {item.price} = $ {item.price*item.quantity}</p>
+                            </div>
+                            
+                        </div>
+                    ))
+                    }
+                    
+                    <div key="totalPrice">
+                        <p className="totalPriceText">Precio total: $ {context.totalPrice()}</p>
+                    </div>
 
-            
+                    <div key="decision" className="cartButtonContainer">
+                        <button onClick={context.clear} className="cartDeleteFullButton">Eliminar productos</button>
+                        <button onClick={context.clear} className="carteEndShoppingButton">Finalizar la compra</button>
+                    </div>
+                </div>
+            :
+                <div className="noSelectionContainer">
+                <p className="noSelectionText">No has seleccionado ningun producto!</p>
+                <Link style={{textDecoration: 'none'}} to={"/"}>
+                    <button className="exploreItemsButton">Explorar materiales</button>
+                </Link>
+                </div>
+            }
             
         </div>
     )

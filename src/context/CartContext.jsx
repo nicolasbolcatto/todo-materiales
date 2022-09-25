@@ -50,9 +50,18 @@ const CartProvider = ({children}) =>{
         return total
     }
 
-    //console.log(cart)
+   //Function that calculates total price of items in cart
+   function totalPrice() {
+    const cartCopy  = [...cart]
+    let totalPrice = 0
+    cartCopy.forEach((item) => {
+        totalPrice = totalPrice + item.quantity * item.price;
+    })
+    return totalPrice
+}
+
     return(
-        <CartContext.Provider value={{cart,addItem,removeItem,clear,totalItemsInCart}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, clear, totalItemsInCart, totalPrice}}>
             {children}
         </CartContext.Provider>
     )

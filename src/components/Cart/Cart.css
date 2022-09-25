@@ -13,7 +13,7 @@
     font-weight: bold;
     display: flex;
     justify-content: flex-start;
-    border-bottom: 0.25rem solid gray;
+    border-bottom: 0.1rem solid gray;
     margin: 1rem ;
 }
 
@@ -26,6 +26,7 @@
     width: 3rem;
     height: auto;
     margin-left: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .cartItemName{
@@ -81,7 +82,67 @@
     color: white;
     font-size: 1.2rem;
     width: 20vw;
-    height: 2rem;
+    height: 3rem;
     align-self: center;
-    margin-left: 1rem;
+}
+
+.cartDeleteFullButton:hover{
+    scale: 1.1;
+    cursor: pointer;
+    transition: ease-in-out 0.4s;
+    opacity: 50%;
+}
+
+.carteEndShoppingButton{
+    background-color: green;
+    color: white;
+    font-size: 1.2rem;
+    width: 20vw;
+    height: 3rem;
+    align-self: center;
+}
+
+.carteEndShoppingButton:hover{
+    scale: 1.1;
+    cursor: pointer;
+    transition: ease-in-out 0.4s;
+    opacity: 50%;
+}
+
+.cartButtonContainer{
+    display: flex;
+    place-content: center;
+    justify-content: space-around;
+}
+
+
+.noSelectionContainer{
+    display: grid;
+    place-content: center;
+}
+
+.noSelectionText{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.exploreItemsButton{
+    width: 100%;
+    height: 3rem;
+    background-color: darkblue;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.exploreItemsButton:hover{
+    background-color: darkgray;
+    transition: ease-in-out 0.4s;
+}
+
+.totalPriceText{
+    text-align: end;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: 2rem;
 }

@@ -19,11 +19,9 @@ const NavBar = () => {
         {link: "/category/3", name: "Electricidad", categoryId: 3 },
         {link: "/category/4", name: "Griferías y sanitarios", categoryId: 4 },
     ]
-    //Renders the navbar and the CartWidget component
-    let render = false
     
-    context.cart !== [] ? render = true : render = false
-    console.log(render)
+    //Renders the navbar and the CartWidget component
+
     return(
         <nav className="nav">
             <div className="topNav">
@@ -41,7 +39,8 @@ const NavBar = () => {
                     
                     {arrayLinks.map(x => (<li key={x.categoryId}><Link className="navButton" style={{textDecoration: 'none'}} to={x.link}>{x.name}</Link></li>))}
                 </ul>
-                {render ? <div className="cartWidget"> <CartWidget /> </div> : <div className="noShow"></div>}
+                {/* Conditional rendering of CartWidget if items in cart */}
+                {context.totalItemsInCart() ? <div className="cartWidget"> <CartWidget /> </div> : <div className="noShow"></div>}
                 
             </div>
             
