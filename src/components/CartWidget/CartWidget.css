@@ -4,12 +4,34 @@
     border: 0.2rem solid darkblue;
     border-radius: 0.5rem;
     width: 2rem;
+    height: 2.5rem;
+    
 }
 
 .cartWidget:hover{
+    scale: 1.1;
     cursor: pointer;
+    transition: ease-in-out 0.4s;
+    opacity: 50%;
 }
 
 .cartIcon{
     width: 100%;
+}
+
+.cartIconCount{
+    position: relative;
+    left: 30px;
+    top: -50px;
+    background-color: red;
+    border-radius: 2rem;
+    width: 1.4rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.noShow{
+    display: none;
 }

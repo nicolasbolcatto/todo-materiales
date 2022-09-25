@@ -1,0 +1,148 @@
+.cartContainer{
+    padding: 1rem 1rem;
+    background: linear-gradient(wheat,white); 
+}
+
+.cartTitle{
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.cartItem{
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 0.1rem solid gray;
+    margin: 1rem ;
+}
+
+.cartControls{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cartItemImage{
+    width: 3rem;
+    height: auto;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.cartItemName{
+    margin-left: 1rem;
+}
+
+.cartItemQuantity{
+    font-size: 1rem;
+    align-self: center;
+    margin-left: 1rem;
+    color: gray;
+}
+
+.cartReduceButton{
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    width: 2rem;
+    height: 75%;
+    align-self: center;
+    margin-left: 1rem;
+}
+
+.cartAddButton{
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    width: 2rem;
+    height: 75%;
+    align-self: center;
+    margin-left: 1rem;
+}
+
+.cartDeleteButton{
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    width: 2rem;
+    height: 75%;
+    align-self: center;
+    margin-left: 1rem;
+}
+
+.cartDeleteButton:hover{
+    scale: 1.1;
+    cursor: pointer;
+    transition: ease-in-out 0.4s;
+    opacity: 50%;
+}
+
+.cartDeleteFullButton{
+    background-color: red;
+    color: white;
+    font-size: 1.2rem;
+    width: 20vw;
+    height: 3rem;
+    align-self: center;
+}
+
+.cartDeleteFullButton:hover{
+    scale: 1.1;
+    cursor: pointer;
+    transition: ease-in-out 0.4s;
+    opacity: 50%;
+}
+
+.carteEndShoppingButton{
+    background-color: green;
+    color: white;
+    font-size: 1.2rem;
+    width: 20vw;
+    height: 3rem;
+    align-self: center;
+}
+
+.carteEndShoppingButton:hover{
+    scale: 1.1;
+    cursor: pointer;
+    transition: ease-in-out 0.4s;
+    opacity: 50%;
+}
+
+.cartButtonContainer{
+    display: flex;
+    place-content: center;
+    justify-content: space-around;
+}
+
+
+.noSelectionContainer{
+    display: grid;
+    place-content: center;
+}
+
+.noSelectionText{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.exploreItemsButton{
+    width: 100%;
+    height: 3rem;
+    background-color: darkblue;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.exploreItemsButton:hover{
+    background-color: darkgray;
+    transition: ease-in-out 0.4s;
+}
+
+.totalPriceText{
+    text-align: end;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+}
