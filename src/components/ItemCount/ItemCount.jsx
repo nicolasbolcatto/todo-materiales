@@ -1,12 +1,9 @@
 //Imports css file for ItemCount
-import {CartContext} from "../../context/CartContext";
-import React,{useContext} from "react";
+import React from "react";
 import './ItemCount.css';
 
 
 function ItemCount ({item, initial, onAdd, count, setCount, itemAdd, setItemAdd}) {
-
-    const context = useContext(CartContext)
 
     //Defines a function to reduce the quantity in the counter, and checks whether count is less or not than initial. If it is, it sets count to initial
     function onReduce(){
@@ -22,14 +19,6 @@ function ItemCount ({item, initial, onAdd, count, setCount, itemAdd, setItemAdd}
             setCount(count+1)
         } else
             setCount(item.stock)
-    }
-
-
-    //Defines a function to completely remove an item from the cart. It also updates the selected amount and the stock.
-    function onRemove(){
-        context.removeItem(item.id)
-        setItemAdd(0);
-        item.stock += itemAdd;
     }
     
     return(

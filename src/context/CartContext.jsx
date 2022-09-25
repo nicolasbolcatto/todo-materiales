@@ -25,22 +25,14 @@ const CartProvider = ({children}) =>{
             cart[existingItemIndex].quantity += quantity;
             setCart([...cart]);
         } else {
-            setCart([...cart,{id: item.id, name: item.name, price: item.price,quantity: quantity}])
+            setCart([...cart,{id: item.id, name: item.name, price: item.price, quantity: quantity, image : item.image}])
         } 
     }
     
     //Function that removes an item from the cart, by it's id
     function removeItem(id){
-        if(isInCart(id)){
-            let existingItem = cart.find(element => element.id === id)
-            let cartWithRemovedItem = []
-            cart.forEach(item => {
-               if(item.id !== existingItem.id){
-                cartWithRemovedItem.push(item)
-               }
-            })
-            setCart([...cartWithRemovedItem])
-        }
+        const filteredCart = cart.filter((item) => item.id !== id);
+        setCart(filteredCart)
     }
 
     //Function that completely empties the cart
@@ -48,9 +40,19 @@ const CartProvider = ({children}) =>{
         setCart([]);
     }
 
-    console.log(cart)
+    //Function that calculates total amount of items in cart
+    function totalItemsInCart() {
+        const cartCopy  = [...cart]
+        let total = 0
+        cartCopy.forEach((item) => {
+            total = total + item.quantity;
+        })
+        return total
+    }
+
+    //console.log(cart)
     return(
-        <CartContext.Provider value={{cart,addItem,removeItem,clear}}>
+        <CartContext.Provider value={{cart,addItem,removeItem,clear,totalItemsInCart}}>
             {children}
         </CartContext.Provider>
     )
