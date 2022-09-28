@@ -16,7 +16,7 @@ const Cart = () => {
                     {context.cart.map((item) => (
                         
                         <div className="cartItem" key={item.id}>
-                            <img className="cartItemImage" src={"../.." + item.image} alt={item.name}></img>
+                            <img className="cartItemImage" src={"../." + item.image} alt={item.name}></img>
                             <Link style={{textDecoration: 'none'}} to={`/item/${item.id}`}><p className="cartItemName">{item.name}</p></Link>
                             <div className="cartControls">
                                 <button onClick={() => context.removeItem(item.id)} className="cartDeleteButton">x</button>

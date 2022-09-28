@@ -18,6 +18,7 @@ const ItemDetailContainer = () => {
             if (snapshot.exists()){
                 
                 setItem({id: snapshot.id, ...snapshot.data()})
+                item.image = "../." + item.image
 
             }
             

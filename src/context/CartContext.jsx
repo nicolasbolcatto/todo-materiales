@@ -25,7 +25,7 @@ const CartProvider = ({children}) =>{
             cart[existingItemIndex].quantity += quantity;
             setCart([...cart]);
         } else {
-            setCart([...cart,{id: item.id, name: item.name, price: item.price, quantity: quantity, image : item.image}])
+            setCart([...cart,{id: item.id, name: item.name, price: item.price, quantity: quantity, image : "../." + item.image}])
         } 
     }
     

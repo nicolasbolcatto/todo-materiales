@@ -29,12 +29,12 @@ const ItemListContainer = () => {
             if (snapshot.size > 0){
                 
                 setItems(snapshot.docs.map(item => ({id: item.id, ...item.data()})))
-
+                items.forEach((item)=> {item.image = "../." + item.image})
             }
             
         }).catch(error => console.log("Hubo un error en la carga de datos: " + error))
     
-    },[id]);
+    },[id,items]);
     return(
         //Returns the item list
         <div>
