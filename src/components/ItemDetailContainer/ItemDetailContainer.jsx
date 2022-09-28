@@ -1,30 +1,31 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ItemDetail from "../ItemDetail/ItemDetail"
+import ItemDetail from "../ItemDetail/ItemDetail";
+import {doc, getDoc, getFirestore} from "firebase/firestore";
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState([]);
     const {id} = useParams();
     useEffect(()=>{
-        
-        fetch("../../products.json").then(response => {
-            return response.json();
 
-        }).then(database => {
+        const db = getFirestore();
 
-            setTimeout(()=>{
-                const product = database.find((prod) => prod.id === Number(id));
-                //console.log(product)
-                product.image = "../." + product.image;
-                product.stock = Number(product.stock)
-                setItem(product);
-            },2000);
+        const item = doc(db, "items", id);
 
+        getDoc(item).then((snapshot) => {
+
+            if (snapshot.exists()){
+                
+                setItem({id: snapshot.id, ...snapshot.data()})
+
+            }
+            
         }).catch(error => console.log("Hubo un error en la carga de datos: " + error))
     
     },[id]);
 
+    
 
     return(
         <div>
