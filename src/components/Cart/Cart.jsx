@@ -33,7 +33,7 @@ const Cart = () => {
 
                     <div key="decision" className="cartButtonContainer">
                         <button onClick={context.clear} className="cartDeleteFullButton">Eliminar productos</button>
-                        <button onClick={context.clear} className="carteEndShoppingButton">Finalizar la compra</button>
+                        <button className="carteEndShoppingButton">Finalizar la compra</button>
                     </div>
                 </div>
             :
