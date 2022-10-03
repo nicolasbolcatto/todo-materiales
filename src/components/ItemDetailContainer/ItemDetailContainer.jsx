@@ -3,10 +3,14 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import {doc, getDoc, getFirestore} from "firebase/firestore";
+import Loading from "../Loading/Loading";
 
 const ItemDetailContainer = () => {
+
     const [item, setItem] = useState([]);
     const {id} = useParams();
+    const [loading, setLoading] = useState(true);
+
     useEffect(()=>{
 
         const db = getFirestore();
@@ -16,10 +20,12 @@ const ItemDetailContainer = () => {
         getDoc(item).then((snapshot) => {
 
             if (snapshot.exists()){
+                setTimeout(() =>{
+                    setItem({id: snapshot.id, ...snapshot.data()})
+                    item.image = "../." + item.image
+                    setLoading(false);
+                },500)
                 
-                setItem({id: snapshot.id, ...snapshot.data()})
-                item.image = "../." + item.image
-
             }
             
         }).catch(error => console.log("Hubo un error en la carga de datos: " + error))
@@ -30,7 +36,7 @@ const ItemDetailContainer = () => {
 
     return(
         <div>
-            <ItemDetail item={item} initial={1}/>
+            {loading ? <Loading/> : <ItemDetail item={item} initial={1}/>}
         </div>
         //Returns the item detail component
     )

@@ -1,0 +1,9 @@
+.loadingContainer{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+h3{
+    text-align: center;
+}

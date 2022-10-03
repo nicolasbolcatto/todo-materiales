@@ -24,20 +24,24 @@ const CartProvider = ({children}) =>{
             let existingItemIndex = cart.findIndex(element => element.id === item.id)
             cart[existingItemIndex].quantity += quantity;
             setCart([...cart]);
+            //sessionStorage.setItem("cart",[...cart]);
         } else {
-            setCart([...cart,{id: item.id, name: item.name, price: item.price, quantity: quantity, image : item.image}])
+            setCart([...cart,{id: item.id, name: item.name, price: item.price, quantity: quantity, image : item.image}]);
+            //sessionStorage.setItem("cart",[...cart,{id: item.id, name: item.name, price: item.price, quantity: quantity, image : item.image}])
         } 
     }
     
     //Function that removes an item from the cart, by it's id
     function removeItem(id){
         const filteredCart = cart.filter((item) => item.id !== id);
-        setCart(filteredCart)
+        setCart(filteredCart);
+        //sessionStorage.setItem("cart",filteredCart);
     }
 
     //Function that completely empties the cart
     function clear(){
         setCart([]);
+        //sessionStorage.setItem("cart",[]);
     }
 
     //Function that calculates total amount of items in cart
@@ -45,13 +49,14 @@ const CartProvider = ({children}) =>{
         const cartCopy  = [...cart]
         let total = 0
         cartCopy.forEach((item) => {
-            total = total + item.quantity;
-        })
-        return total
-    }
+                total = total + item.quantity;
+            })
+            return total;
+        }
 
    //Function that calculates total price of items in cart
    function totalPrice() {
+    
     const cartCopy  = [...cart]
     let totalPrice = 0
     cartCopy.forEach((item) => {

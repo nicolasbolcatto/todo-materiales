@@ -1,6 +1,5 @@
 .itemDetailContainer{
     padding: 1rem 1rem;
-    background: linear-gradient(wheat,white); 
 }
 
 .itemDetail{
@@ -24,7 +23,7 @@
 
 .itemImage{
     margin: 1rem;
-    border: 0.25rem solid lightslategray;
+    border: 0.25rem solid gray;
 }
 
 .itemName{

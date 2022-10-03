@@ -1,5 +1,4 @@
 .nav{
-    background: linear-gradient(0deg,wheat,whitesmoke);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,6 +27,10 @@
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
+}
+
+.navList li{
+    color: white;
 }
 
 .navButton{

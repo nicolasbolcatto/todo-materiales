@@ -1,46 +1,46 @@
-.cartContainer{
+.cartContainer {
     padding: 1rem 1rem;
-    background: linear-gradient(wheat,white); 
 }
 
-.cartTitle{
+.cartTitle {
     font-weight: bold;
     text-align: center;
     font-size: 1.5rem;
 }
 
-.cartItem{
+.cartItem {
     font-weight: bold;
     display: flex;
     justify-content: flex-start;
     border-bottom: 0.1rem solid gray;
-    margin: 1rem ;
+    margin: 1rem;
 }
 
-.cartControls{
+.cartControls {
     display: flex;
     justify-content: flex-end;
 }
 
-.cartItemImage{
+.cartItemImage {
     width: 3rem;
     height: auto;
     margin-left: 1rem;
     margin-bottom: 0.5rem;
+    border-radius: 0.4rem;
 }
 
-.cartItemName{
+.cartItemName {
     margin-left: 1rem;
 }
 
-.cartItemQuantity{
+.cartItemQuantity {
     font-size: 1rem;
     align-self: center;
     margin-left: 1rem;
     color: gray;
 }
 
-.cartReduceButton{
+.cartReduceButton {
     background-color: black;
     color: white;
     font-size: 1rem;
@@ -50,7 +50,7 @@
     margin-left: 1rem;
 }
 
-.cartAddButton{
+.cartAddButton {
     background-color: black;
     color: white;
     font-size: 1rem;
@@ -60,7 +60,7 @@
     margin-left: 1rem;
 }
 
-.cartDeleteButton{
+.cartDeleteButton {
     background-color: red;
     color: white;
     font-size: 1rem;
@@ -70,14 +70,14 @@
     margin-left: 1rem;
 }
 
-.cartDeleteButton:hover{
+.cartDeleteButton:hover {
     scale: 1.1;
     cursor: pointer;
     transition: ease-in-out 0.4s;
     opacity: 50%;
 }
 
-.cartDeleteFullButton{
+.cartDeleteFullButton {
     background-color: red;
     color: white;
     font-size: 1.2rem;
@@ -86,14 +86,14 @@
     align-self: center;
 }
 
-.cartDeleteFullButton:hover{
+.cartDeleteFullButton:hover {
     scale: 1.1;
     cursor: pointer;
     transition: ease-in-out 0.4s;
     opacity: 50%;
 }
 
-.carteEndShoppingButton{
+.carteEndShoppingButton {
     background-color: green;
     color: white;
     font-size: 1.2rem;
@@ -102,32 +102,31 @@
     align-self: center;
 }
 
-.carteEndShoppingButton:hover{
+.carteEndShoppingButton:hover {
     scale: 1.1;
     cursor: pointer;
     transition: ease-in-out 0.4s;
     opacity: 50%;
 }
 
-.cartButtonContainer{
+.cartButtonContainer {
     display: flex;
     place-content: center;
     justify-content: space-around;
 }
 
-
-.noSelectionContainer{
+.noSelectionContainer {
     display: grid;
     place-content: center;
 }
 
-.noSelectionText{
+.noSelectionText {
     text-align: center;
     font-weight: bold;
     font-size: 2rem;
 }
 
-.exploreItemsButton{
+.exploreItemsButton {
     width: 100%;
     height: 3rem;
     background-color: darkblue;
@@ -135,12 +134,12 @@
     font-size: 1.5rem;
 }
 
-.exploreItemsButton:hover{
+.exploreItemsButton:hover {
     background-color: darkgray;
     transition: ease-in-out 0.4s;
 }
 
-.totalPriceText{
+.totalPriceText {
     text-align: end;
     font-weight: bold;
     font-size: 1.5rem;
