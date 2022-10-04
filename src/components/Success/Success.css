@@ -1,0 +1,17 @@
+.successContainer{
+    display: grid;
+    place-content: center;
+    height: 75vh;
+}
+
+.imgContainer{
+    display: grid;
+    place-content: center;
+}
+.imgContainer img{
+    width: 200px;
+}
+
+.successContainer h1, p{
+    text-align: center;
+}
