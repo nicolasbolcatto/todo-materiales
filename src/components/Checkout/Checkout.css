@@ -1,37 +1,65 @@
-    .checkoutContainer {
-        display: grid;
-        place-content: center;
-        width: 100vw;
-        height: 75vh;
-        margin-top: 2rem;
-    }
-    
-    .formGroup {
-        margin: 1.5rem 0 1.5rem 0;
-    }
-    
-    .formLabel {
-        font-weight: bold;
-        font-size: 1.25rem;
-        color: #131d52;
-    }
-    
-    .formInput {
-      width: 25vw;
-      height: 35px;
-      margin-top: 1rem;
-      border-radius: 0.5rem;
-    }
-    
-    .orderButton {
-        background-color: #28d2c7;
-        color: white;
-        font-size: 1.2rem;
-        width: 25vw;
-        height: 3rem;
-        align-self: center;
-    }
-    
-    .orderButton:hover {
-        cursor: pointer;
-    }
+.checkout {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkoutCartDetail {
+    width: 50vw;
+    margin: 2rem 1rem 1rem;
+}
+
+.cartItemNameCheckout {
+    margin: 0 1rem 0 1rem;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.cartItemQuantityCheckout {
+    text-align: left;
+    font-size: 1rem;
+    color: lightgray;
+}
+
+.checkoutContainer {
+    width: 50vw;
+    display: grid;
+    place-content: center;
+    margin: 2rem 1rem 1rem;
+}
+
+.formGroup {
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.formLabel {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #131d52;
+}
+
+.formInput {
+    width: 25vw;
+    height: 35px;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+
+.formInput:hover {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    ;
+    transition: ease-in-out 0.5s;
+}
+
+.orderButton {
+    background-color: #28d2c7;
+    color: white;
+    font-size: 1.2rem;
+    width: 25vw;
+    height: 3rem;
+    align-self: center;
+}
+
+.orderButton:hover {
+    cursor: pointer;
+    opacity: 75%;
+}

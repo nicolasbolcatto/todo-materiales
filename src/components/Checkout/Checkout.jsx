@@ -62,33 +62,51 @@ const Checkout = () => {
   return (
     <div>
       {context.totalItemsInCart() ?
-      <div className="checkoutContainer">
-        <div className='formGroup'>
-          <div>
-            <label htmlFor="name" className='formLabel'>Nombre</label>
+      <div className='checkout'>
+        <div className='checkoutCartDetail'>
+          {context.cart.map((item) => (
+              
+              <div className="cartItem" key={item.id}>
+                  <img className="cartItemImage" src={"../." + item.image} alt={item.name}></img>
+                  <Link style={{textDecoration: 'none'}} to={`/item/${item.id}`}><p className="cartItemNameCheckout">{item.name}</p></Link>
+                  <p className="cartItemQuantityCheckout">{item.quantity} x $ {item.price}</p>
+                  
+              </div>
+          ))
+          }
+          
+          <div key="totalPrice">
+              <p className="totalPriceText">Precio total: $ {context.totalPrice()}</p>
           </div>
-          <div>
-          <input type="text"  className="formInput" id="name" onInput={(e) => setName(e.target.value)} />
-          </div> 
         </div>
-        <div className='formGroup'>
-          <div>
-            <label htmlFor="email" className='formLabel'>Email</label>
+        <div className="checkoutContainer">
+          <div className='formGroup'>
+            <div>
+              <label htmlFor="name" className='formLabel'>Nombre</label>
+            </div>
+            <div>
+            <input type="text"  className="formInput" id="name" onInput={(e) => setName(e.target.value)} />
+            </div> 
           </div>
-          <div>
-            <input type="text" id="email" className="formInput" onInput={(e) => setEmail(e.target.value)} />
+          <div className='formGroup'>
+            <div>
+              <label htmlFor="email" className='formLabel'>Email</label>
+            </div>
+            <div>
+              <input type="text" id="email" className="formInput" onInput={(e) => setEmail(e.target.value)} />
+            </div>
           </div>
+          <div className='formGroup'>
+            <div>
+              <label htmlFor="phone" className='formLabel'>Teléfono</label>
+            </div>
+            <div>
+              <input type="text" id="phone" className="formInput"  onInput={(e) => setPhone(e.target.value)} />
+            </div>
+              
+          </div>
+          <button type="button" className='orderButton' onClick={() => {sendOrder()}}>Generar Orden</button>
         </div>
-        <div className='formGroup'>
-          <div>
-            <label htmlFor="phone" className='formLabel'>Teléfono</label>
-          </div>
-          <div>
-            <input type="text" id="phone" className="formInput"  onInput={(e) => setPhone(e.target.value)} />
-          </div>
-            
-        </div>
-        <button type="button" className='orderButton' onClick={() => {sendOrder()}}>Generar Orden</button>
       </div>
       :
       orderId !== "" ? <Success id={orderId} />

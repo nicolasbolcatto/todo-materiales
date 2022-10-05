@@ -7,8 +7,9 @@
     background-color: #131d52;
 }
 
-.item:hover{
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;;
+.item:hover {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    ;
     transition: ease-in-out 0.5s;
 }
 
@@ -20,7 +21,9 @@
 
 .itemCategoryList {
     text-align: left;
+    font-weight: bold;
     background-color: #28d2c7;
+    color: #f1f5f6;
     max-width: fit-content;
     margin-left: 0.5rem;
     padding: 0.25rem 0.5rem;

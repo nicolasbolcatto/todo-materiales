@@ -28,6 +28,7 @@ const NavBar = () => {
                 <Link style={{textDecoration: 'none'}} to={"/"}>
                     <div className="title">
                         <h1>Todo Materiales</h1>
+                        <img src={"../../logo/architect.png"} alt="logo" width="180" />
                         <h2>Tu tienda online para la construcción</h2>
                     </div>
                 </Link>
@@ -38,10 +39,10 @@ const NavBar = () => {
                 <ul className="navList">
                     
                     {arrayLinks.map(x => (<li key={x.categoryId}><Link className="navButton" style={{textDecoration: 'none'}} to={x.link}>{x.name}</Link></li>))}
-                </ul>
-                {/* Conditional rendering of CartWidget if items in cart */}
-                {context.totalItemsInCart() ? <div className="cartWidget"> <CartWidget /> </div> : <div className="noShow"></div>}
                 
+                {/* Conditional rendering of CartWidget if items in cart */}
+                {context.totalItemsInCart() ? <li> <CartWidget /> </li> : <div className="noShow"></div>}
+                </ul>
             </div>
             
         </nav>
