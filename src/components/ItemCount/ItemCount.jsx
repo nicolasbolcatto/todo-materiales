@@ -28,11 +28,16 @@ function ItemCount ({item, initial, onAdd, count, setCount, itemAdd, setItemAdd}
                 <button className="itemCountButton" onClick = {onReduce}>-</button>
                 <p className="itemCountInput">{count}</p>
                 <button className="itemCountButton" onClick={onIncrease}>+</button>
+            </div>
+        
+            <div className="itemCountButtonContainer">
                 <button className="itemAddButton" onClick = {onAdd}>Agregar</button>
                 <div className="itemStock">
                     <p>Stock: {item.stock}</p>
                 </div>
             </div>
+                
+            
         </div>
     )
 }

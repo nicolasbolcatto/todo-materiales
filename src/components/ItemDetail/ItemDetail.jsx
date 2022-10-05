@@ -36,21 +36,20 @@ const ItemDetail = ({item}) => {
                     <p className="itemPrice">$ {item.price}</p>
                     <p className="itemDescription">{item.description}</p>
                 </div>
-                <div>
-                    {itemAdd === 0 ?
-                        <ItemCount item={item} initial={1} onAdd={onAdd} count={count} setCount={setCount} itemAdd={itemAdd} setItemAdd={setItemAdd}/>
-                        :
-                        <Link style={{textDecoration: 'none'}} to={"/cart"}>
-                            <div className="itemCount">
-                                <button className="itemEndButton">Ver carrito</button>
-                            </div>
-                        </Link>
-                }
-                
-                </div>
+            <div>
+            {itemAdd === 0 ?
+                <ItemCount item={item} initial={1} onAdd={onAdd} count={count} setCount={setCount} itemAdd={itemAdd} setItemAdd={setItemAdd}/>
+                :
+                <Link style={{textDecoration: 'none'}} to={"/cart"}>
+                    <div className="itemCount">
+                        <button className="itemEndButton">Ver carrito</button>
+                    </div>
+                </Link>
+            }
+        
+            </div>    
             </div>
-            
-            
+                    
         </div>
     )
     }

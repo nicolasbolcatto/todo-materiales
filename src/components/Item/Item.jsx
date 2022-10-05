@@ -9,8 +9,8 @@ const Item = ({item}) => {
         //Returns a card to show the information and image of the product
         <div className="item">
             <img className="itemImgList" src={item.image} alt={item.name}></img>
-            <p className="itemCategoryList">{item.category}</p>
             <p className="itemNameList">{item.name}</p>
+            <p className="itemCategoryList">{item.category}</p>
             <p className="itemPriceList">$ {item.price}</p>
             <p className="itemStockList">Stock: {item.stock}</p>
         </div>
