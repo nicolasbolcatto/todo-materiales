@@ -7,13 +7,13 @@
 
 .topNav{
     font-weight: bold;
-    color: black;
+    color: #131d52;
     display: flex;
 }
 
 .title{
     font-weight: bold;
-    color: black;
+    color: #131d52;
     text-align: center;
 }
 
@@ -30,11 +30,11 @@
 }
 
 .navList li{
-    color: white;
+    color: #f1f5f6;
 }
 
 .navButton{
-    background-color: darkblue;
+    background-color: #131d52;
     font-weight: bold;
     color: whitesmoke;
     padding: 0.75rem 0.75rem;
@@ -44,7 +44,10 @@
 
 .navButton:hover{
     cursor: pointer;
-    background-color: gray;
-    box-shadow: none;
-    transition: ease-in-out 0.3s;
+    height: 80%;
+    border-bottom: 0.25rem solid #28d2c7;
+    border-radius: 0;
+    background-color: #f1f5f6;
+    color: #131d52;
+    transition: ease-in-out 0.5s;
 }

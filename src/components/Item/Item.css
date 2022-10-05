@@ -3,20 +3,24 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 1rem;
-    background-color: lightgray;
     border-radius: 1rem;
+    background-color: #131d52;
+}
+
+.item:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;;
+    transition: ease-in-out 0.5s;
 }
 
 .itemImgList {
     margin: 2rem;
-    border: .25rem solid lightslategray;
+    border: .25rem solid #f1f5f6;
+    border-radius: 1.25rem;
 }
 
 .itemCategoryList {
     text-align: left;
-    color: white;
-    background-color: darkblue;
+    background-color: #28d2c7;
     max-width: fit-content;
     margin-left: 0.5rem;
     padding: 0.25rem 0.5rem;
@@ -27,32 +31,19 @@
     font-weight: bold;
     text-align: center;
     margin: 0 0.5rem;
+    background-color: #131d52;
+    color: #f1f5f6;
 }
 
 .itemPriceList {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    background-color: #131d52;
+    color: #f1f5f6;
 }
 
 .itemStockList {
-    text-align: center;
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 0.5rem 0 1rem 0;
     font-size: 1rem;
-}
-
-.itemButtonList {
-    margin: 1rem;
-    font-weight: bold;
-    font-size: 1rem;
-    background-color: lightgray;
-    width: auto;
-    height: 2rem;
-    border: 0.25rem solid lightgray;
-    border-radius: 0.5rem;
-}
-
-.itemButtonList:hover {
-    cursor: pointer;
-    background-color: goldenrod;
-    transition: ease-in-out 0.3s;
-    border-color: goldenrod;
+    background-color: #131d52;
+    color: #f1f5f6;
 }

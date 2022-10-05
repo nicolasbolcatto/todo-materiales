@@ -1,8 +1,5 @@
 .cartWidget{
-    background-color: lightgray;
     padding: 0.25rem 0.5rem;
-    border: 0.2rem solid darkblue;
-    border-radius: 0.5rem;
     width: 2rem;
     height: 2.5rem;
     
@@ -11,12 +8,12 @@
 .cartWidget:hover{
     scale: 1.1;
     cursor: pointer;
-    transition: ease-in-out 0.4s;
+    transition: ease-in-out 0.5s;
     opacity: 50%;
 }
 
 .cartIcon{
-    width: 100%;
+    height: 40px;
 }
 
 .cartIconCount{
@@ -24,6 +21,7 @@
     left: 30px;
     top: -50px;
     background-color: red;
+    opacity: 75%;
     border-radius: 2rem;
     width: 1.4rem;
     color: white;

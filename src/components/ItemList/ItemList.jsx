@@ -11,7 +11,7 @@ const ItemList = ({items}) => {
         <div className="itemList">
             {items.map(item => 
                 
-                <Link key={item.id} style={{textDecoration: 'none'}} to={`/item/${item.id}`}>
+                <Link className="linkItem" key={item.id} style={{textDecoration: 'none'}} to={`/item/${item.id}`}>
                     <Item 
                     item={item}/>
                 </Link>

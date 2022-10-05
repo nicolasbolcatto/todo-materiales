@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    width: 15rem;
     border-radius: 1rem;
     padding: 0.25rem;
     margin: 1rem;
@@ -11,13 +13,13 @@ button {
     /* Variables */
     --button_radius: 0.5rem;
     --button_color: #e8e8e8;
-    --button_outline_color: #000000;
-    font-size: 2rem;
+    --button_outline_color: #131d52;
+    font-size: 2.5rem;
     font-weight: bold;
     border: none;
     border-radius: var(--button_radius);
     background: var(--button_outline_color);
-    width: 4rem;
+    width: 2.5rem;
 }
   
 .itemCountButton {
@@ -25,7 +27,7 @@ button {
     box-sizing: border-box;
     border: 0.1rem solid var(--button_outline_color);
     border-radius: var(--button_radius);
-    padding: 0 0.75rem;
+    padding: 0 0.2rem;
     background: var(--button_color);
     color: var(--button_outline_color);
 }
@@ -33,7 +35,7 @@ button {
 
 .itemCountInput{
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin: 0.5rem;
     padding: 0.5rem;
     border-radius: 0.5rem;
@@ -43,30 +45,26 @@ button {
     cursor: pointer;
 }
 
+.itemCountButtonContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .itemAddButton{
-    width: 100%;
+    width: 80%;
     font-weight: bold;
     font-size: 1rem;
     color: white;
     margin: 0.5rem;
     padding: 0.75rem;
-    background-color: darkblue;
+    background-color: #131d52;
     border-radius: 0.5rem;
 }
 
 .itemAddButton:hover{
     cursor: pointer;
-}
-
-.itemRemoveButton{
-    width: 100%;
-    font-weight: bold;
-    font-size: 1rem;
-    color: white;
-    margin: 0.5rem;
-    padding: 0.75rem;
-    background-color: red;
-    border-radius: 0.5rem;
 }
 
 .itemRemoveButton:hover{
@@ -80,7 +78,7 @@ button {
     color: white;
     margin: 0.5rem;
     padding: 0.75rem;
-    background-color: darkgreen;
+    background-color: #28d2c7;
     border-radius: 0.5rem;
 }
 
