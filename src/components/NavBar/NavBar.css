@@ -25,6 +25,11 @@
     background-color: #131d52;
 }
 
+.title img {
+    height: 10vh;
+    width: auto;
+}
+
 .buttons {
     width: 100%;
     display: grid;
@@ -32,7 +37,7 @@
 }
 
 .navList {
-    margin: 1rem 0 1rem;
+    margin: 1rem 0 0 0;
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
@@ -41,6 +46,7 @@
 
 .navList li {
     color: #131d52;
+    font-size: 1.25rem;
 }
 
 .navButton {

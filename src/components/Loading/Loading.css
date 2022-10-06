@@ -1,9 +1,9 @@
-.loadingContainer{
+.loadingContainer {
     display: grid;
     place-content: center;
-    height: 100vh;
+    height: 50vh;
 }
 
-h3{
+h3 {
     text-align: center;
 }
